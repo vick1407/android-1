@@ -1,0 +1,214 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@font-face {
+    font-family: "Android";
+    src: url("/desafio010/idroid.otf") format("opentype");
+    font-weight: normal;
+}
+/*
+#c5ebd6
+#83e1ed
+#3ddc84
+#2fa866
+#1a5c37
+#063d1e
+*/
+
+*{
+    /*configuração global para todos os elementos terem margim e padding 0 para não atrapalhar na hora de estiizar.*/
+    margin: 0;
+    padding: 0;
+}
+
+:root{
+    --cor0: #c5ebd6;
+    --cor1: #83e1ed;
+    --cor2:#3ddc84;
+    --cor3:#2fa866;
+    --cor4:#1a5c37;
+    --cor5:#063d1e;
+
+    --font-padrao: Arial, Verdana, Helvetica, sans-serif;
+    --font-destaque: "Bebas Neue", 'cursive';
+    --font-android: "Android", 'cursive';
+}
+
+
+body{
+    background-color: var(--cor0);
+    font-family: var(--font-padrao);
+}
+
+header{
+    padding-top: 40px;
+    text-align: center;
+    min-height: 150px;
+    background-image: linear-gradient(to bottom, var(--cor3,), var(--cor5));
+}
+
+header h1{
+    font-weight: normal;
+    font-size: 3em;
+    color: white;
+    font-family: var(--font-destaque);
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.404);
+}
+
+header > p{
+    max-width: 600px;
+    margin: auto;
+    padding-right: 10px;
+    padding-left: 10px ;
+    font-family: var(--font-padrao);
+    font-size: 1.2em;
+    color: white;
+    text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.404);
+}
+
+nav{
+    padding: 10px;
+    box-shadow: 0px 7px 7px rgba(0, 0, 0, 0.247);
+    background-color: var(--cor5);
+}
+
+nav > a {
+    color: var(--cor2);
+    margin-bottom: 20px;
+    text-decoration: none;
+    padding: 10px;
+    font-weight: bold;
+}
+
+nav > a:hover {
+    border-radius: 5px;
+    background-color: var(--cor4);
+    color: var(--cor5);
+    transition-duration: 0.3s;
+
+}
+
+main{
+    margin: auto;
+    max-width: 800px;
+    min-width: 320px;
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.349);
+    margin-bottom: 30px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+main >article> h1 {
+    font-weight: normal;
+    font-family: var(--font-android);
+    color: var(--cor5);
+    font-size: 1.8em;
+}
+
+main >article> h2 {
+    font-weight: normal;
+    color: var(--cor4);
+    font-family: var(--font-android);
+    font-size: 1.3em;
+    background-image: linear-gradient(to right, var(--cor2), transparent);
+    padding-left: 10px;
+}
+
+main p{
+    text-indent: 30px;
+    margin: 15px 0px;
+    text-align: justify;
+    line-height: 2em; /*configura o espaçamento entre linhas*/
+    font-size: 1em;
+}
+
+main strong {
+    padding: 2px 6px;
+    font-weight: bold;
+    color: var(--cor4);
+
+}
+
+main a{
+    text-decoration: none;
+    font-weight: bold;
+    color: var(--cor5);
+    background-color: var(--cor2);
+}
+
+main a:hover {
+    text-decoration: underline;
+    color: var(--cor4);
+}
+
+main img{
+    width: 100%;
+}
+
+main img.pequena{
+    max-width: 350px;
+    display: block;
+    margin: auto;
+    
+}
+
+aside{
+    background-color: var(--cor2);
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.199);
+}
+
+aside h3 {
+    color: white;
+    background-color: var(--cor4);
+    margin: -10px -10px 0 -10px;
+    padding: 10px;
+    border-radius: 10px 10px 0px 0px;
+}
+
+
+aside ul {
+    list-style: "\2714\00A0\00A0"; /*sinal do check do lado das li, código foi pegado na emojipedia. 00A0 é para dar um espaço entre o check e o texto para não ficarem grudados.*/
+    list-style-position: inside; /*significa que a bolinha de cada li vai ficar para dentro e não para fora.*/
+    columns: 2;
+}
+
+div.video {
+    background-color: var(--cor5);
+    margin: 0px -20px 30px -20px;
+    padding: 20px;
+    padding-bottom: 59%;
+    position: relative;
+}
+
+div.video > iframe{
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    width: 90%;
+    height: 90%;
+}
+
+footer{
+    background-color: var(--cor5);
+    color: white;
+    text-align: center;
+    font-size: 0.8em;
+    padding: 5px;
+
+}
+
+footer a{
+    color: white;
+    font-weight: bolder;
+    text-decoration: none;
+
+}
+
+footer a:hover{
+    text-decoration: underline;
+    color: var(--cor1);
+}
